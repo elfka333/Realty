@@ -1,0 +1,42 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
+
+:root {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $grey;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $grey;
+  overflow-x: hidden;
+}
+
+.section-main {
+  background-image: url("../img/bg-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 208px;
+  position: relative;
+  @media (max-width: 1200px) {
+    padding-bottom: 10px;
+  }
+
+  &__image {
+    position: absolute;
+  }
+}
