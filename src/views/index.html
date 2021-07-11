@@ -34,7 +34,158 @@
 </head>
 <body>
 @@include("../blocks/modules/header/header.html")
-<section class="section-main"></section>
+<section class="section-selection">
+    <div class="wrapper">
+        <div class="selection">
+            <div class="selection-1block">
+                <div class="block selection-1block__type">
+                    <a href="#" class="block-name">Тип объекта<i class="icon-down"></i></a>
+                </div>
+                <div class="block selection-1block__location">
+                    <a href="#" class="block-name">Район<i class="icon-down"></i></a>
+                </div>
+            </div>
+            <div class="selection-2block">
+                <div class="selection-2block-box">
+                    <div class="selection-2block__type">
+                        <div class="block">
+                            <a href="#" class="block-name"> Площадь</a>
+                        </div>
+                        <div class="block">
+                            <div class="selection-2block__value">_________</div>
+                            <div class="selection-2block__value2">м2</div>
+                            <div class="invalid-feedback">
+                                Некорректное число.
+                            </div>
+                        </div>
+                        <div class="block">
+                            <label for="customRange1"></label>
+                            <input type="range" class="custom-range" min="0" max="5" id="customRange1">
+                        </div>
+                    </div>
+                </div>
+                <div class="selection-2block-box">
+                    <div class="selection-2block__type">
+                        <div class="block">
+                            <a href="#" class="block-name">Цена за м2</a>
+                        </div>
+                        <div class="block">
+                            <div class="selection-2block__value"></div>
+                            <div class="selection-2block__value2">тыс.</div>
+                            <div class="invalid-feedback">
+                                Некорректное число.
+                            </div>
+                        </div>
+                        <div class="block ">
+                            <label for="customRange2"></label>
+                            <input type="range" class="custom-range" min="0" max="5" id="customRange2">
+                        </div>
+                    </div>
+                </div>
+                <div class="selection-2block-box">
+                    <div class="selection-2block-footer">
+                        <div class="selection-2block-item">
+                            <button class="btn selection-2block-footer__reset">Сбросить фильтры</button>
+                            <i class="icon-close"></i>
+                        </div>
+                        <div class="selection-2block-item">
+                            <button class="btn selection-2block-footer__show">Показать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-home">
+    <div class="wrapper">
+        <h2 class="title">Загородные дома</h2>
+        <p class="section-home__text">Наши дома расположились в уютных районах Екатеринбурга:<br>Верх-Исетский район,
+            Железнодорожный район, Чкаловский район.</p>
+        <div class="slider-home">
+            <div class="slider-home-child">
+                <div class="slider-home-item">
+                    <div class="slider-home-thumb">
+                        <img class="slider-home-thumb__image" src="../img/home1.png" alt="Дом  “Брусника”">
+                        <div class="slider-home-info">
+                            <h3 class="slider-home-info__title">Дом “Брусника”</h3>
+                            <p class="slider-home-info__description">ул. Карла Маркса, 60, Екатеринбург</p>
+                            <div class="slider-home-like"></div>
+                        </div>
+                    </div>
+                    <div class="slider-home-footer">
+                        <div class="slider-home-options">
+                            <div class="slider-home-options__square">200 м2</div>
+                            <div class="slider-home-options__land">10 сот</div>
+                            <div class="slider-home-options__remont">с отдекой</div>
+                        </div>
+                        <div class="slider-home-footer__price">7 005 456 500 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-home-child">
+                <div class="slider-home-item">
+                    <div class="slider-home-thumb">
+                        <img class="slider-home-thumb__image" src="../img/home2.png" alt="Дом  “Трендис”">
+                        <div class="slider-home-info">
+                            <h3 class="slider-home-info__title">Дом “Трендис”</h3>
+                            <p class="slider-home-info__description">ул. Урицкого, 13, Екатеринбург</p>
+                            <div class="slider-home-like"></div>
+                        </div>
+                    </div>
+                    <div class="slider-home-footer">
+                        <div class="slider-home-options">
+                            <div class="slider-home-options__square">500 м2</div>
+                            <div class="slider-home-options__land">12 сот</div>
+                            <div class="slider-home-options__remont">с отдекой</div>
+                        </div>
+                        <div class="slider-home-footer__price">10 000 234 500 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-home-child">
+                <div class="slider-home-item">
+                    <div class="slider-home-thumb">
+                        <img class="slider-home-thumb__image" src="../img/home3.png" alt="Дома  “Панорома”">
+                        <div class="slider-home-info">
+                            <h3 class="slider-home-info__title">Дома “Панорома”</h3>
+                            <p class="slider-home-info__description">ул. Толстого, 340, Екатеринбург</p>
+                            <div class="slider-home-like"></div>
+                        </div>
+                    </div>
+                    <div class="slider-home-footer">
+                        <div class="slider-home-options">
+                            <div class="slider-home-options__square">150 м2</div>
+                            <div class="slider-home-options__land">13 сот</div>
+                            <div class="slider-home-options__remont">с отдекой</div>
+                        </div>
+                        <div class="slider-home-footer__price">5 045 000 500 ₽</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-home-child">
+                <div class="slider-home-item">
+                    <div class="slider-home-thumb">
+                        <img class="slider-home-thumb__image" src="../img/home3.png" alt="Дома  “Панорома”">
+                        <div class="slider-home-info">
+                            <h3 class="slider-home-info__title">Дома “Панорома”</h3>
+                            <p class="slider-home-info__description">ул. Толстого, 340, Екатеринбург</p>
+                            <div class="slider-home-like"></div>
+                        </div>
+                    </div>
+                    <div class="slider-home-footer">
+                        <div class="slider-home-options">
+                            <div class="slider-home-options__square">150 м2</div>
+                            <div class="slider-home-options__land">13 сот</div>
+                            <div class="slider-home-options__remont">с отдекой</div>
+                        </div>
+                        <div class="slider-home-footer__price">5 045 000 500 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @@include("../blocks/modules/footer/footer.html")
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -61,6 +212,35 @@
                     slidesToScroll: 1,
                     arrows: false,
                     dots: true
+                }
+            },
+            {
+                breakpoint: 540,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
+    });
+    $('.slider-home').slick({
+        dots: false,
+        infinite: false,
+        arrows: true,
+        speed: 300,
+        useCSS: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: true,
+                    dots: false
                 }
             },
             {
