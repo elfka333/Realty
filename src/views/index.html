@@ -38,11 +38,22 @@
     <div class="wrapper">
         <div class="selection">
             <div class="selection-1block">
-                <div class="block selection-1block__type">
-                    <a href="#" class="block-name">Тип объекта<i class="icon-down"></i></a>
+                <div class="block selection-1block__type dropdown">
+                    <a href="#" class="block-name" role="button" id="dropdownMenuLink__type" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-offset="10,20">Тип объекта<i
+                            class="icon-down"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink__type">
+                        <a class="dropdown-item" href="#">Загородные дома</a>
+                        <a class="dropdown-item" href="#">Городские квартиры</a>
+                    </div>
                 </div>
-                <div class="block selection-1block__location">
-                    <a href="#" class="block-name">Район<i class="icon-down"></i></a>
+                <div class="block selection-1block__location dropdown">
+                    <a href="#" class="block-name" role="button" id="dropdownMenuLink__location" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-offset="10,20">Район<i class="icon-down"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink__location">
+                        <a class="dropdown-item" href="#">Загородные дома</a>
+                        <a class="dropdown-item" href="#">Городские квартиры</a>
+                    </div>
                 </div>
             </div>
             <div class="selection-2block">
@@ -52,15 +63,16 @@
                             <a href="#" class="block-name"> Площадь</a>
                         </div>
                         <div class="block">
-                            <div class="selection-2block__value">_________</div>
+                            <output class="selection-2block__value" id="outputRange11" for="customRange1"></output>
                             <div class="selection-2block__value2">м2</div>
                             <div class="invalid-feedback">
                                 Некорректное число.
                             </div>
                         </div>
                         <div class="block">
-                            <label for="customRange1"></label>
-                            <input type="range" class="custom-range" min="0" max="5" id="customRange1">
+                            <input type="range" name="customRange1" class="range" min="0" max="1000" value="120"
+                                   id="customRange1">
+                            <output id="outputRange1" for="customRange1">120</output>
                         </div>
                     </div>
                 </div>
@@ -70,15 +82,16 @@
                             <a href="#" class="block-name">Цена за м2</a>
                         </div>
                         <div class="block">
-                            <div class="selection-2block__value"></div>
+                            <output class="selection-2block__value" id="outputRange22" for="customRange2"></output>
                             <div class="selection-2block__value2">тыс.</div>
                             <div class="invalid-feedback">
                                 Некорректное число.
                             </div>
                         </div>
                         <div class="block ">
-                            <label for="customRange2"></label>
-                            <input type="range" class="custom-range" min="0" max="5" id="customRange2">
+                            <input type="range" name="customRange2" class="range" min="0" max="98000" value="10350"
+                                   id="customRange2">
+                            <output id="outputRange2" for="customRange2">10350</output>
                         </div>
                     </div>
                 </div>
@@ -120,13 +133,29 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="slider-home-box">
+                            <div class="slider-home-info">
+                                <h3 class="slider-home-info__title">Дом “Брусника”</h3>
+                                <p class="slider-home-info__description">ул. Карла Маркса, 60, Екатеринбург</p>
+                            </div>
+                            <div class="slider-home-info__like">
+                                <div class="slider-home-like">
+                                    <div class="slider-home-like__img"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="slider-home-footer">
                             <div class="slider-home-options">
                                 <div class="slider-home-options__icon slider-home-options__square">200 м2</div>
                                 <div class="slider-home-options__icon slider-home-options__land">10 сот</div>
                                 <div class="slider-home-options__icon slider-home-options__remont">с отделкой</div>
                             </div>
-                            <div class="slider-home-footer__price">7 005 456 500 ₽</div>
+                            <div class="slider-home-info__like2">
+                                <div class="slider-home-footer__price">7 005 456 500 ₽</div>
+                                <div class="slider-home-like">
+                                    <div class="slider-home-like__img"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,18 +259,35 @@
                                     <p class="apartaments-info__description">ул. Карла Маркса, 60, Екатеринбург</p>
                                 </div>
                                 <div class="apartaments-info__like">
-                                    <div class="apartamentse-like">
+                                    <div class="apartaments-like">
                                         <div class="apartaments-like__img"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="apartaments-footer">
+                            <div class="apartaments-box">
+                                <div class="apartaments-info">
+                                    <h3 class="apartaments-info__title">Дом “Жуковка”</h3>
+                                    <p class="apartaments-info__description">ул. Карла Маркса, 60, Екатеринбург</p>
+                                </div>
+                                <div class="apartaments-info__like">
+                                    <div class="apartaments-like">
+                                        <div class="apartaments-like__img"></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="apartaments-options">
                                 <div class="apartaments-options__icon slider-home-options__square">72 м2</div>
                                 <div class="apartaments-options__icon slider-home-options__remont">с отделкой</div>
                             </div>
-                            <div class="apartaments-footer__price">3 006 435 500 ₽</div>
+
+                            <div class="apartaments-info__like2">
+                                <div class="apartaments-footer__price">3 006 435 500 ₽</div>
+                                <div class="apartaments-like">
+                                    <div class="apartaments-like__img"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -255,7 +301,7 @@
                                     <p class="apartaments-info__description">ул. Зорге, 160, Екатеринбург</p>
                                 </div>
                                 <div class="apartaments-info__like">
-                                    <div class="apartamentse-like">
+                                    <div class="apartaments-like">
                                         <div class="apartaments-like__img"></div>
                                     </div>
                                 </div>
@@ -280,7 +326,7 @@
                                     <p class="apartaments-info__description">ул. Заречная, 120, Екатеринбург</p>
                                 </div>
                                 <div class="apartaments-info__like">
-                                    <div class="apartamentse-like">
+                                    <div class="apartaments-like">
                                         <div class="apartaments-like__img"></div>
                                     </div>
                                 </div>
@@ -305,7 +351,7 @@
                                     <p class="apartaments-info__description">ул. Карла Маркса, 120, Екатеринбург</p>
                                 </div>
                                 <div class="apartaments-info__like">
-                                    <div class="apartamentse-like">
+                                    <div class="apartaments-like">
                                         <div class="apartaments-like__img"></div>
                                     </div>
                                 </div>
@@ -330,7 +376,7 @@
                                     <p class="apartaments-info__description">ул. Московская, 10, Екатеринбург</p>
                                 </div>
                                 <div class="apartaments-info__like">
-                                    <div class="apartamentse-like">
+                                    <div class="apartaments-like">
                                         <div class="apartaments-like__img"></div>
                                     </div>
                                 </div>
@@ -355,7 +401,7 @@
                                     <p class="apartaments-info__description">ул. Прашина, 60, Екатеринбург</p>
                                 </div>
                                 <div class="apartaments-info__like">
-                                    <div class="apartamentse-like">
+                                    <div class="apartaments-like">
                                         <div class="apartaments-like__img"></div>
                                     </div>
                                 </div>
@@ -374,6 +420,160 @@
             <div class="apartaments-btn">
                 <button class="apartaments-btn__text">Смотреть больше</button>
             </div>
+        </div>
+    </div>
+</section>
+<section class="section-genplan">
+    <div class="wrapper">
+        <h2 class="title">Генплан</h2>
+        <p class="section-genplan__text">На генплане вы можете посмотреть территорию покупки. В поселке все
+            предусмотрено.<br>Здесь проведены необходимые коммуникации.Это место влюбляет в себя.</p>
+        <div class="content">
+            <div class="genplan">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                           aria-controls="home" aria-selected="true">Загородные дома</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="appartaments-tab" data-toggle="tab" href="#appartaments" role="tab"
+                           aria-controls="appartaments" aria-selected="false">Городские квартиры</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <img class="tab-content__image" src="../img/genplan.png" alt="Загородные дома">
+            <div class="tab-content__metka m56">
+                <div class="tab-content__bubble">
+                    <div class="tab-content__bubble-title">Дом 56</div>
+                    <div class="tab-content__bubble-text">Вы можете приобрести<br>10 567 457руб</div>
+                </div>
+            </div>
+            <div class="tab-content__metka m23">
+                <div class="tab-content__bubble">
+                    <div class="tab-content__bubble-title">Дом 23</div>
+                    <div class="tab-content__bubble-text"></div>
+                </div>
+            </div>
+            <div class="tab-content__metka m234">
+                <div class="tab-content__bubble">
+                    <div class="tab-content__bubble-title">Дом 234</div>
+                    <div class="tab-content__bubble-text"></div>
+                </div>
+            </div>
+            <div class="tab-content__metka m27">
+                <div class="tab-content__bubble">
+                    <div class="tab-content__bubble-title">школа №27</div>
+                    <div class="tab-content__bubble-text"></div>
+                </div>
+            </div>
+            <div class="tab-content__metka m116">
+                <div class="tab-content__bubble">
+                    <div class="tab-content__bubble-title">Дом 116</div>
+                    <div class="tab-content__bubble-text"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade disabled" id="appartaments" role="tabpanel" aria-labelledby="appartaments-tab">
+            Городские квартиры
+        </div>
+    </div>
+</section>
+<section class="section-about">
+    <div class="wrapper">
+        <h2 class="title">О компании</h2>
+        <p class="section-about__text">Профессиональный оператор рынка элитной недвижимости с 2008 года.<br>HOMEFOR –
+            это сочетание репутации, многолетнего опыта и высокого уровня сервиса.<br>Компания заслужила доверие и
+            признание профессиональных участников рынка
+        </p>
+        <div class="content">
+            <div class="about">
+                <ul class="about-list">
+                    <li class="about-list__item about-list__01">Большой опыт<br>в строительстве</li>
+                    <li class="about-list__item about-list__02">Доступные цены</li>
+                    <li class="about-list__item about-list__03">Оперативные сроки работы</li>
+                    <li class="about-list__item about-list__04">Качественные материалы</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-news">
+    <div class="wrapper">
+        <h2 class="title">Наши новости</h2>
+        <p class="section-news__text">Узнай новости компании первым. Мы всегда остаемся в тренде.
+        </p>
+        <div class="content">
+            <div class="slider-news">
+                <div class="slider-news-child">
+                    <div class="slider-news-item">
+                        <div class="slider-news-thumb">
+                            <img class="slider-news-thumb__image" src="../img/img9.png" alt="">
+                            <div class="slider-news-box">
+                                <div class="slider-news-info">
+                                    <h3 class="slider-news-info__title">02.04.2020</h3>
+                                    <p class="slider-news-info__description">В 2018 году происходили изменения в главном
+                                        законе долевого строительства ФЗ-214 для решения сложной задачи – строительства
+                                        120 млн квадратных метров жилья нового качества и усиления контроля </p>
+                                    <a href="#" class="slider-news__link">Смотреть больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-news-child">
+                    <div class="slider-news-item">
+                        <div class="slider-news-thumb">
+                            <img class="slider-news-thumb__image" src="../img/img9.png" alt="">
+                            <div class="slider-news-box">
+                                <div class="slider-news-info">
+                                    <h3 class="slider-news-info__title">02.04.2020</h3>
+                                    <p class="slider-news-info__description">В 2018 году происходили изменения в главном
+                                        законе долевого строительства ФЗ-214 для решения сложной задачи – строительства
+                                        120 млн квадратных метров жилья нового качества и усиления контроля </p>
+                                    <a href="#" class="slider-news__link">Смотреть больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-news-child">
+                    <div class="slider-news-item">
+                        <div class="slider-news-thumb">
+                            <img class="slider-news-thumb__image" src="../img/img9.png" alt="">
+                            <div class="slider-news-box">
+                                <div class="slider-news-info">
+                                    <h3 class="slider-news-info__title">02.04.2020</h3>
+                                    <p class="slider-news-info__description">В 2018 году происходили изменения в главном
+                                        законе долевого строительства ФЗ-214 для решения сложной задачи – строительства
+                                        120 млн квадратных метров жилья нового качества и усиления контроля </p>
+                                    <a href="#" class="slider-news__link">Смотреть больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-news-child">
+                    <div class="slider-news-item">
+                        <div class="slider-news-thumb">
+                            <img class="slider-news-thumb__image" src="../img/img9.png" alt="">
+                            <div class="slider-news-box">
+                                <div class="slider-news-info">
+                                    <h3 class="slider-news-info__title">02.04.2020</h3>
+                                    <p class="slider-news-info__description">В 2018 году происходили изменения в главном
+                                        законе долевого строительства ФЗ-214 для решения сложной задачи – строительства
+                                        120 млн квадратных метров жилья нового качества и усиления контроля </p>
+                                    <a href="#" class="slider-news__link">Смотреть больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-news__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 </section>
@@ -418,24 +618,46 @@
     });
 </script>
 <script>
-    function setProgress(index) {
-        const calc = ((index + 1) / ($slider.slick('getSlick').slideCount)) * 100;
+    $(function () {
+        var el;
+        $("#customRange1").change(function () {
+            el = $(this);
+            el
+                .next("#outputRange1")
+                .text(el.val());
+        })
+            .trigger('change');
+    });
+    $(function () {
+        var el;
+        $("#customRange2").change(function () {
+            el = $(this);
+            el
+                .next("#outputRange2")
+                .text(el.val());
+        })
+            .trigger('change');
+    });
+</script>
+<script>
+    const $slider_home = $('.slider-home');
+    const $progressBar_home = $('.slider-home__progress');
+    const $progressBarLabel_home = $('.slider-home__label');
 
-        $progressBar
+    function setProgressHome(index) {
+        const calc = ((index + 1) / ($slider_home.slick('getSlick').slideCount)) * 100;
+
+        $progressBar_home
             .css('background-size', `${calc}% 100%`)
             .attr('aria-valuenow', calc);
 
-        $progressBarLabel.text(`${calc.toFixed(2)}% completed`);
+        $progressBarLabel_home.text(`${calc.toFixed(2)}% completed`);
     }
 
-    const $slider = $('.slider-home');
-    const $progressBar = $('.slider-home__progress');
-    const $progressBarLabel = $('.slider__label');
-
-    $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        setProgress(nextSlide);
+    $slider_home.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        setProgressHome(nextSlide);
     });
-    $slider.slick({
+    $slider_home.slick({
         dots: false,
         infinite: false,
         arrows: true,
@@ -453,7 +675,64 @@
                 }
             },
             {
-                breakpoint: 540,
+                breakpoint: 990,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: false,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
+    });
+    setProgressHome(0);
+</script>
+<script>
+    const $slider_new = $('.slider-news');
+    const $progressBar_new = $('.slider-news__progress');
+    const $progressBarLabel_new = $('.slider-news__label');
+
+    function setProgress(index) {
+        const calc = ((index + 1) / ($slider_new.slick('getSlick').slideCount)) * 100;
+
+        $progressBar_new
+            .css('background-size', `${calc}% 100%`)
+            .attr('aria-valuenow', calc);
+
+        $progressBarLabel_new.text(`${calc.toFixed(2)}% completed`);
+    }
+
+    $slider_new.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        setProgress(nextSlide);
+    });
+    $slider_new.slick({
+        dots: false,
+        infinite: false,
+        arrows: true,
+        speed: 400,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 990,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -465,6 +744,7 @@
     });
     setProgress(0);
 </script>
+
 <script src="js/main.js"></script>
 <script src="js/vendor.js"></script>
 </body>
