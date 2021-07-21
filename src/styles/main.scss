@@ -441,6 +441,9 @@ body {
       display: inline-block;
       padding-left: 29px;
       padding-right: 32px;
+      @media (max-width: 370px) {
+        padding-right: 3rem;
+      }
 
       &::before {
         content: '';
@@ -568,6 +571,7 @@ body {
   @media (max-width: 540px) {
     &__text {
       padding: 0 3rem;
+      width: auto;
     }
   }
   @media (max-width: 370px) {
@@ -991,6 +995,7 @@ body {
     &__text {
       font-size: 12px;
       padding: 0 2rem;
+      width: auto;
     }
   }
 
